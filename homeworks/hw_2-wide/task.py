@@ -6,7 +6,7 @@ def sum_of_two_numbers(number_a, number_b):
     number_b - (int or float)
     return: int or float
     """
-    return
+    return (number_a + number_b)
 
 #2 - Numeric Operation Error checking
 def absolute_numeric_value(value):
@@ -16,7 +16,14 @@ def absolute_numeric_value(value):
     value - (any)
     return: any numeric
     """
+    try:
+        return abs(value)
+    except:
+        raise ValueError
     return
+
+
+
 
 #3 - Numeric Operation Error checking
 def sum_of_two_integer_numbers_with_conversion(number_a, number_b):
@@ -27,7 +34,15 @@ def sum_of_two_integer_numbers_with_conversion(number_a, number_b):
     number_b - (any numeric)
     return: int
     """
-    return
+    try:
+        (int(number_a + number_b))
+    except:
+        (number_a + number_b) != int
+        raise TypeError
+    else:
+        round(number_a + number_b)
+    return 
+    
 
 #4 - Numeric Operation Error checking
 def sum_of_two_absolute_numbers(number_a, number_b):
@@ -37,7 +52,12 @@ def sum_of_two_absolute_numbers(number_a, number_b):
     number_b - (any numeric)
     return: any numeric
     """
-    return
+    try:
+        (abs(number_a + number_b))
+    except:
+        (number_a + number_b) != abs
+        raise ValueError
+    return 
 
 #5 - String Operation Error Checking
 def string_from_two_strings_with_conversion(string_a, string_b):
